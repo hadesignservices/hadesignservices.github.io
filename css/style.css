@@ -37,17 +37,16 @@ body {
   margin-left: 20px;
 }
 
+/* Site Title */
 .top-header .site-title {
   text-align: center;
   font-size: 1.8rem;
   color: black;
   flex-grow: 1;
   margin: 0;
-  font-family: 'Arial', sans-serif !important; /* Use Arial font with !important */
-  font-weight: normal !important; /* Ensure it's not bold with !important */
+  font-family: 'Arial', sans-serif !important;
+  font-weight: normal !important;
 }
-
-
 
 /* Slideshow Section */
 .intro {
@@ -73,19 +72,26 @@ body {
   z-index: -1;
   opacity: 0;
   transition: opacity 0.75s ease-in-out;
+  display: none; /* Initially hide all images */
+}
+
+/* Show the active image */
+.intro-slideshow img.active {
+  display: block;
+  opacity: 1;
 }
 
 /* Contact Overlay in Top-Right Corner */
 .contact-container {
   position: absolute;
-  top: 20px; /* Adjust to move it slightly below the top */
-  right: 20px; /* Positions it at the right corner */
+  top: 100px; /* Adjusted for space below the fixed header */
+  right: 20px;
   z-index: 2;
 }
 
 /* Contact Box Styling */
 .contact {
-  width: 320px; /* Increased width for better fitting */
+  width: 320px;
   padding: 20px;
   background-color: rgba(211, 211, 211, 0.8);
   color: #000;
@@ -97,7 +103,7 @@ body {
   max-height: 300px;
   overflow: auto;
   word-wrap: break-word;
-  white-space: normal; /* Ensures other text wraps properly */
+  white-space: normal;
 }
 
 /* Contact Section Heading */
@@ -115,7 +121,7 @@ body {
   text-indent: 0;
   padding-left: 0;
   display: block;
-  word-break: break-word; /* Prevents breaking words mid-way */
+  word-break: break-word;
 }
 
 /* Prevent email from breaking to the next line */
@@ -125,11 +131,11 @@ body {
   color: #333;
   text-indent: 0;
   padding-left: 0;
-  display: inline-block; /* Makes the element respect the width of its parent */
-  white-space: nowrap; /* Prevents text from wrapping */
-  overflow: hidden; /* Hides overflow if the text is too long */
-  text-overflow: ellipsis; /* Adds '...' if the email exceeds the container's width */
-  width: 100%; /* Ensures the email takes up the full width */
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
 /* Responsive adjustments */
@@ -139,4 +145,3 @@ body {
     padding: 15px;
   }
 }
-
