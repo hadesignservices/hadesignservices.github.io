@@ -30,10 +30,9 @@ body {
 
 /* Logo positioned on the top left corner */
 .top-header .logo {
-  height: 60px;
-  position: absolute;
-  left: 0;
-  top: 5px;
+  height: 90px; /* Adjusted for better visibility */
+  width: auto;  /* Maintain aspect ratio */
+  position: relative;
   margin-left: 20px;
 }
 
@@ -143,5 +142,9 @@ body {
   .contact {
     width: 80%;
     padding: 15px;
+  }
+
+  .top-header .logo {
+    height: 60px;  /* Smaller height on mobile */
   }
 }
