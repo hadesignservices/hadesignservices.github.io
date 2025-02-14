@@ -30,7 +30,7 @@ body {
 
 /* Logo positioned on the top left corner */
 .top-header .logo {
-  height: 90px; /* Adjusted for better visibility */
+  height: 100px; /* Adjusted for better visibility */
   width: auto;  /* Maintain aspect ratio */
   position: relative;
   margin-left: 20px;
