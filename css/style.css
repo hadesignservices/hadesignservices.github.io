@@ -30,10 +30,11 @@ body {
 
 /* Logo positioned on the top left corner */
 .top-header .logo {
-  height: 100px; /* Adjusted for better visibility */
+  height: 80px; /* Adjusted for better visibility */
   width: auto;  /* Maintain aspect ratio */
   position: relative;
-  margin-left: 20px;
+  margin-left: 10px;
+  z-index: 5; /* Ensure it's above other elements */
 }
 
 /* Site Title */
@@ -130,10 +131,10 @@ body {
   color: #333;
   text-indent: 0;
   padding-left: 0;
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: block;  /* Ensure it doesn’t cut off */
+  white-space: normal;  /* Allow it to wrap */
+  word-wrap: break-word;  /* Break long words */
+  overflow-wrap: break-word; /* Ensure no overflow */
   width: 100%;
 }
 
@@ -146,5 +147,21 @@ body {
 
   .top-header .logo {
     height: 60px;  /* Smaller height on mobile */
+    margin-left: 10px;
+  }
+
+  /* Ensures the contact box doesn't cut off email on mobile */
+  .contact-container {
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* Additional Fix for Logo Position and Slideshow on Mobile */
+  .top-header .site-title {
+    font-size: 1.4rem; /* Adjusted title size */
+    padding-left: 10px;
   }
 }
