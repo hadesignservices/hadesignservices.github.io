@@ -30,12 +30,12 @@ body {
 
 /* Logo positioned on the top left corner */
 .top-header .logo {
-  height: 70px; /* Adjusted for better positioning */
+  height: 70px; /* Desktop logo size */
   width: auto;
-  position: absolute; /* Allows precise control */
-  top: 10px;       /* Moves logo upward to prevent overlap with slideshow text */
-  left: 15px;      /* Adjust the left offset */
-  z-index: 15;     /* Ensure it's above other elements */
+  position: absolute;
+  top: 10px;     /* Moves logo upward to prevent overlap with slideshow text */
+  left: 15px;    /* Adjust the left offset */
+  z-index: 15;   /* Ensure it's above other elements */
 }
 
 /* Site Title */
@@ -58,7 +58,7 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.1rem;
-  padding-top: 80px; /* Makes space for the fixed header */
+  padding-top: 80px; /* Space for the fixed header */
   z-index: 1;
 }
 
@@ -152,7 +152,7 @@ body {
     left: 10px;
   }
 
-  /* Ensures the contact box is centered on mobile */
+  /* Centers the contact box on mobile */
   .contact-container {
     width: 100%;
     left: 0;
@@ -161,10 +161,9 @@ body {
     position: relative;
   }
 
-  /* Adjust title size on mobile */
+  /* Adjust title size and left padding to prevent overlap with the logo */
   .top-header .site-title {
     font-size: 1.4rem;
-    padding-left: 10px;
+    padding-left: 70px; /* Increased to ensure the title clears the logo */
   }
 }
-
