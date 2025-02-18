@@ -30,11 +30,12 @@ body {
 
 /* Logo positioned on the top left corner */
 .top-header .logo {
-  height: 80px; /* Adjusted for better visibility */
-  width: auto;  /* Maintain aspect ratio */
-  position: relative;
-  margin-left: 10px;
-  z-index: 5; /* Ensure it's above other elements */
+  height: 70px; /* Adjusted for better positioning */
+  width: auto;
+  position: absolute; /* Allows precise control */
+  top: 10px;       /* Moves logo upward to prevent overlap with slideshow text */
+  left: 15px;      /* Adjust the left offset */
+  z-index: 15;     /* Ensure it's above other elements */
 }
 
 /* Site Title */
@@ -124,17 +125,17 @@ body {
   word-break: break-word;
 }
 
-/* Prevent email from breaking to the next line */
+/* Ensure email doesn't cut off on mobile */
 .contact p.email {
   font-size: 1rem;
   margin: 5px 0;
   color: #333;
   text-indent: 0;
   padding-left: 0;
-  display: block;  /* Ensure it doesn’t cut off */
-  white-space: normal;  /* Allow it to wrap */
-  word-wrap: break-word;  /* Break long words */
-  overflow-wrap: break-word; /* Ensure no overflow */
+  display: block;
+  white-space: normal;    /* Allow text to wrap */
+  word-wrap: break-word;  /* Break long words if needed */
+  overflow-wrap: break-word;
   width: 100%;
 }
 
@@ -146,11 +147,12 @@ body {
   }
 
   .top-header .logo {
-    height: 60px;  /* Smaller height on mobile */
-    margin-left: 10px;
+    height: 50px; /* Smaller logo on mobile */
+    top: 5px;     /* Moves it slightly higher on mobile */
+    left: 10px;
   }
 
-  /* Ensures the contact box doesn't cut off email on mobile */
+  /* Ensures the contact box is centered on mobile */
   .contact-container {
     width: 100%;
     left: 0;
@@ -159,9 +161,10 @@ body {
     position: relative;
   }
 
-  /* Additional Fix for Logo Position and Slideshow on Mobile */
+  /* Adjust title size on mobile */
   .top-header .site-title {
-    font-size: 1.4rem; /* Adjusted title size */
+    font-size: 1.4rem;
     padding-left: 10px;
   }
 }
+
